@@ -7,6 +7,8 @@ if (adivinador > adivinar){
 } else if ( adivinador == adivinar) {
     alert("Tu numero es igual al numero aleatorio");
 }
-   else {
+   else if ( adivinador < adivinar) {
     alert("Tu numero es menor al numero aleatorio");
+} else {
+    alert("Por favor ingrese un numero")
 }
