@@ -157,4 +157,3 @@ switch(0){
         console.log('Su numero no es divisible por 2, 3, 5, 7');
        break;
 }*/
-
