@@ -6,7 +6,6 @@ let columnas = parseInt(prompt('Ingrese el numero de columnas'));
 
 let total = (filas * columnas);
 
-document.write("<table border>");
 
 for ( var i = total; total > 0; total--){
     if(total % columnas == 0){
