@@ -5,8 +5,8 @@ let filas = parseInt(prompt('Ingrese el numero de filas'));
 let columnas = parseInt(prompt('Ingrese el numero de columnas'));
 
 
-
 let total = (filas * columnas);
+
 
 for ( var i = total; total > 0; total--){
     if(total % columnas == 0){
