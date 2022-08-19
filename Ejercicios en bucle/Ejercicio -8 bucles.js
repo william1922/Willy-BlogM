@@ -12,7 +12,7 @@ let numero = parseInt(prompt('Ingrese un numero no mayor a 50 para la piramide')
 
 let condicional = 1;
 
-if(numero > 50 || isNaN(numero)){
+if(numero > 50 || isNaN(numero) || numero < 0){
     alert('Por favor ingrese un valor numerico y que no sea mayor a 50');
 }else{
     while(condicional <= numero){
