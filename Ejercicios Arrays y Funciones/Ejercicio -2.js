@@ -16,14 +16,22 @@ ciudadesArray.push(ciudad)
 
 document.write("Estas son las ciudades ingresadas : " + ciudadesArray + "<br>")
 
-ciudadesArray.push("París")
+
 
 document.write("La cantidad de ciudades ingresesadas son " + ciudadesArray.length + "<br>")
 
-document.write(ciudadesArray[0] + " Esta en la PRIMERA posicion" + "<br>" + ciudadesArray[2] + " Esta en la TERCERA posicion y" + "<br>" + ciudadesArray[ciudadesArray.length - 1] + " Esta en la ULTIMA posicion" + "<br>")
+if (ciudadesArray.length > 3){document.write(ciudadesArray[0] + " Esta en la PRIMERA posicion" + "<br>" + ciudadesArray[2] + " Esta en la TERCERA posicion y" + "<br>" + ciudadesArray[ciudadesArray.length - 1] + " Esta en la ULTIMA posicion" + "<br>")} else if (ciudadesArray.length == 3){document.write(ciudadesArray[0] + " Esta en la PRIMERA posicion" + "<br>" + ciudadesArray[ciudadesArray.length - 1] + " Esta en la TERCERA u ULTIMA posicion " + "<br>")
+} else if (ciudadesArray.length == 1){
+    document.write(ciudadesArray + " Es la unica ciudad ingresada <br>")
 
-document.write(ciudadesArray[1] + " Esta en la segunda posicion." + "<br>")
+}
 
+if(ciudadesArray.length >= 2){
+    document.write(ciudadesArray[1] + " Esta en la segunda posicion." + "<br>")
+} else {
+    document.write('Solo a ingresado una ciudad <br>')
+}
+ciudadesArray.push("París")
 ciudadesArray[1] = "Barcelona"
 
 document.write("Este es el arreglo modificado: " + ciudadesArray)
