@@ -29,14 +29,13 @@ let agendaTelefonica = {
             if (nombre === "" || nombre.includes(0) || nombre.includes(1) || nombre.includes(2) || nombre.includes(3) || nombre.includes(4) || nombre.includes(5) || nombre.includes(6) || nombre.includes(7) || nombre.includes(8) || nombre.includes(9)){
                 alert('Por favor ingrese el nombre sin numeros')
             } else {
-                this.nombres.push(nombre)
-            }
-
-            var numero = parseInt(prompt('Ingrese el numero del nuevo contacto'))
+                var numero = parseInt(prompt('Ingrese el numero del nuevo contacto'))
             if (Number(numero) !== numero){
                 alert('Por favor solo ingrese numeros')
             } else {
-            this.telefonos.push(numero)
+                 this.nombres.push(nombre)
+                 this.telefonos.push(numero)
+            }
             }
         } else {
             alert('Ah alcanzado el maximo numero de contactos')
@@ -57,9 +56,13 @@ let agendaTelefonica = {
         }
     },
     listarContactos(){
+        if (this.nombres.length > 0 ){
         for(var i = 0; i < this.nombres.length; i++){
             document.write("Nombre: " + this.nombres[i] + ", Telefono: " + this.telefonos[i] + "<br>")
         }
+    } else {
+        alert('La agenda esta vacia')
+    }
     },
     buscarContacto(){
         var nombre = prompt('Ingrese el nombre');
